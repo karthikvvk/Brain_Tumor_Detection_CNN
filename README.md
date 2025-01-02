@@ -22,8 +22,7 @@ This website is designed to help patients understand complex medical images and 
 - Explains the pill's purpose and relevant precautions.
 
 Check out our demo video
-https://drive.google.com/file/d/1xEy3X5tCQ74A92Qw5FqSQo62vle27kOM/view?usp=sharing
-
+https://drive.google.com/file/d/1GDIUwd6NJ0ctm8fn1dJILZ72TJ7x8vT2/view?usp=drive_link 
 ---
 
 ## Setup Instructions
