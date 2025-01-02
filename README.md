@@ -48,13 +48,9 @@ Install dependencies from the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-#### **1.4 Install Additional Libraries**
-If `requirements.txt` does not cover all, manually install:
-```bash
-pip install easyocr opencv-python-headless requests beautifulsoup4 textblob rapidfuzz google-generativeai pandas numpy matplotlib seaborn
-```
 
-#### **1.5 Set Up API Key for Generative AI**
+
+#### **1.4 Set Up API Key for Generative AI**
 1. Replace the `api_key` in `ai.py` with your valid API key for the **Google Generative AI** platform.
 2. Create a `.env` file to store sensitive information securely:
    ```env
