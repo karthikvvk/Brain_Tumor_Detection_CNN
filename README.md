@@ -21,6 +21,9 @@ This website is designed to help patients understand complex medical images and 
 - Extracts and displays the pill's name, dosage, and usage.
 - Explains the pill's purpose and relevant precautions.
 
+Check out our demo video
+https://drive.google.com/file/d/1xEy3X5tCQ74A92Qw5FqSQo62vle27kOM/view?usp=sharing
+
 ---
 
 ## Setup Instructions
