@@ -1,4 +1,4 @@
-# AI Tumor Detection and AI Pill Detector
+# AI Brain Tumor Detection and AI Pill Detector
 
 ## Overview
 This repository includes a single AI-powered website built using **Streamlit** that combines two applications:
@@ -12,9 +12,9 @@ This website is designed to help patients understand complex medical images and 
 
 ## Features
 ### AI Tumor Detection
-- Detects the presence of brain tumors from medical images.
-- Generates a detailed diagnostic report.
-- Provides insights into the tumor's type and characteristics.
+- Detects four types of brain conditions from MRI scans: Glioma, Meningioma, Pituitary, and No Tumor.
+- Utilizes saliency maps to provide visual cues highlighting tumor regions in MRI scans.
+- Provides a detailed diagnostic report for further medical consultation.
 
 ### AI Pill Detector
 - Identifies pills based on an image uploaded by the user.
@@ -25,33 +25,74 @@ This website is designed to help patients understand complex medical images and 
 
 ## Setup Instructions
 
-### Prerequisites
-Ensure you have Python installed (version 3.8 or later). Install the required libraries by following the steps below.
+### 1. Backend Setup
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Sudharshana426/Brain_Tumor_Detection_CNN.git
-   cd Brain_Tumor_Detection_CNN
-   ```
+#### **1.1 Install Python**
+Ensure Python 3.8 or later is installed. You can download it from [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
-2. Install the required Python packages:
-   ```bash
-   pip install google-generativeai rapidfuzz requests beautifulsoup4 easyocr opencv-python textblob streamlit pandas numpy matplotlib seaborn
+#### **1.2 Create and Activate a Virtual Environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate     # For Windows
+```
+
+#### **1.3 Install Required Python Libraries**
+Install dependencies from the `requirements.txt` file:
+```bash
+pip install -r requirements.txt
+```
+
+#### **1.4 Install Additional Libraries**
+If `requirements.txt` does not cover all, manually install:
+```bash
+pip install easyocr opencv-python-headless requests beautifulsoup4 textblob rapidfuzz google-generativeai pandas numpy matplotlib seaborn
+```
+
+#### **1.5 Set Up API Key for Generative AI**
+1. Replace the `api_key` in `ai.py` with your valid API key for the **Google Generative AI** platform.
+2. Create a `.env` file to store sensitive information securely:
+   ```env
+   GOOGLE_API_KEY=your_google_api_key
    ```
 
 ---
 
-## Usage
+### 2. Run the Project
 
-### Running the Website
-1. Run the Streamlit application:
-   ```bash
-   streamlit run app.py
-   ```
-2. Access the website in your browser to:
-   - Upload medical images for tumor detection and receive a detailed diagnostic report.
-   - Upload pill images to get detailed information about the pill.
+#### **2.1 Start the Streamlit Application**
+Run the Streamlit application directly:
+```bash
+streamlit run app.py
+```
+The application will open in your browser.
+
+#### **2.2 Use the Application**
+1. Upload an MRI scan to the Tumor Detection section.
+   - The model will process the image and classify it into one of the four categories (Glioma, Meningioma, Pituitary, or No Tumor).
+   - The saliency map will highlight the tumor region if present.
+2. Upload an image of a pill to the Pill Detector section.
+   - The application will analyze the image and provide details like pill name, dosage, and purpose.
+
+---
+
+### 3. Notes
+- Ensure that the **uploaded MRI scans and pill images** meet the supported formats (e.g., JPG, PNG).
+- Store large datasets (like weights or drug lists) in a separate file or database for scalability.
+- Use Google Colab for GPU-enabled infrastructure to improve model performance during testing or training.
+
+---
+
+### Dependencies
+- **Python Libraries**: EasyOCR, OpenCV, BeautifulSoup, Requests, TextBlob, RapidFuzz, Google Generative AI SDK, Pandas, NumPy, Matplotlib, Seaborn.
+- **Frameworks**: TensorFlow for deep learning and Streamlit for the web application.
+
+---
+
+### Troubleshooting
+- **EasyOCR Errors**: Install language-specific OCR model files if `easyocr.Reader` raises errors.
+- **Google API Issues**: Verify the API key validity and usage quotas.
+- **Streamlit Issues**: Ensure all required libraries are installed and the correct Python version is used.
 
 ---
 
@@ -70,20 +111,6 @@ Brain_Tumor_Detection_CNN/
 
 ---
 
-## Libraries Used
-- **google-generativeai**: For AI-based diagnostic reporting.
-- **rapidfuzz**: For string matching and comparison.
-- **requests**: For making API calls.
-- **beautifulsoup4**: For web scraping (if needed).
-- **easyocr**: For optical character recognition in pill detection.
-- **opencv-python**: For image processing.
-- **textblob**: For text analysis and language processing.
-- **streamlit**: For creating interactive web-based interfaces.
-- **Pandas and NumPy**: For data manipulation and analysis.
-- **Matplotlib and Seaborn**: For visualization.
-
----
-
 ## Contributions
 Contributions are welcome! Feel free to fork this repository, make enhancements, and submit a pull request.
 
@@ -93,6 +120,7 @@ Contributions are welcome! Feel free to fork this repository, make enhancements,
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
+
 
 ## Contact
 For any questions or issues, please create an issue in this repository or contact the author via GitHub.
