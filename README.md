@@ -24,8 +24,7 @@ This website is designed to help patients understand complex medical images and 
 Check out our demo video
 https://drive.google.com/file/d/1GDIUwd6NJ0ctm8fn1dJILZ72TJ7x8vT2/view?usp=drive_link
 
-For detailed Knowledge check out the Project Report
-https://drive.google.com/file/d/1ex1dqJswvWu7crkWTsySBZs1pWQNsIoB/view?usp=drive_link
+For detailed Knowledge check out the [Project Report](https://drive.google.com/file/d/1ex1dqJswvWu7crkWTsySBZs1pWQNsIoB/view?usp=drive_link).
 ---
 
 ## Setup Instructions
