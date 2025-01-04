@@ -123,3 +123,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 For any questions or issues, please create an issue in this repository or contact the author via GitHub.
+
+Dont forget to check [Sibiling Repo](https://github.com/Vishal-V-D/AI_Tumor_Detection_-_AI_Pill-Detector/tree/master).
